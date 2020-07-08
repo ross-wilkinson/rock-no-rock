@@ -1,6 +1,6 @@
 ---
 Subject: SX
-Date: 2019-12-19
+Date: "2019-12-19"
 Purpose: Measure maximal power output at difference hanging weights using new pulley system. Determine relationship between hanging weight and crank torque.
 ---
 
