@@ -1,11 +1,11 @@
 
 # Pilot Testing
 
-**Purpose:** Measure maximal power output at difference hanging weights using new pulley system. Determine relationship between hanging weight and crank torque.
-
-**Date:** 2019-12-19
-
-**Subject:** SX
+## Test Information
+---
+Purpose | Measure maximal power output at difference hanging weights using new pulley system. Determine relationship between hanging weight and crank torque.
+Date | 2019-12-19
+Subject | SX
 
 ## Results
 
