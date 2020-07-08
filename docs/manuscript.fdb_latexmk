@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex manuscript"] 1594192459 "manuscript.aux" "manuscript.bbl" "manuscript" 1594192460
+["bibtex manuscript"] 1594192459 "manuscript.aux" "manuscript.bbl" "manuscript" 1594192498
   "/usr/local/texlive/2019/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
   "MyCollection.bib" 0 -1 0 ""
   "manuscript.aux" 1594192459 616 7824a90948249a5bf936ff48a6b9ec20 "pdflatex"
   (generated)
-  "manuscript.blg"
   "manuscript.bbl"
-["pdflatex"] 1594192459 "/Users/rosswilkinson/Documents/projects/rock-no-rock/docs/manuscript.tex" "/Users/rosswilkinson/Documents/projects/rock-no-rock/docs/manuscript.pdf" "manuscript" 1594192460
+  "manuscript.blg"
+["pdflatex"] 1594192459 "/Users/rosswilkinson/Documents/projects/rock-no-rock/docs/manuscript.tex" "/Users/rosswilkinson/Documents/projects/rock-no-rock/docs/manuscript.pdf" "manuscript" 1594192498
   "/Users/rosswilkinson/Documents/projects/rock-no-rock/docs/manuscript.aux" 1594192459 616 7824a90948249a5bf936ff48a6b9ec20 ""
   "/Users/rosswilkinson/Documents/projects/rock-no-rock/docs/manuscript.tex" 1594192448 765 d96893334ef52f9ca988b59784475120 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
@@ -62,8 +62,8 @@
   "manuscript.bbl" 1594192188 49 0eba253fc001332e731e8aba3f23127b "bibtex manuscript"
   "manuscript.tex" 1594192448 765 d96893334ef52f9ca988b59784475120 ""
   (generated)
+  "manuscript.log"
   "/Users/rosswilkinson/Documents/projects/rock-no-rock/docs/manuscript.pdf"
   "manuscript.pdf"
-  "manuscript.log"
   "manuscript.aux"
   "/Users/rosswilkinson/Documents/projects/rock-no-rock/docs/manuscript.log"
