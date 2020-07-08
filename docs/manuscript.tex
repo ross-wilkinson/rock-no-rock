@@ -1,27 +1,5 @@
-%--------------------------------------------------------------------------
-%	PACKAGES AND DOCUMENT CONFIGURATIONS
-%--------------------------------------------------------------------------
-\documentclass[10pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath , amssymb , amsthm}
-\usepackage[letterpaper,top=20mm,left=15mm,right=15mm,bottom=15mm]{geometry}
-\usepackage{sectsty}
-\sectionfont{\fontsize{10}{10}\selectfont}
+\documentclass{article}
 \usepackage{graphicx} % Required for the inclusion of images
-\usepackage[square,numbers]{natbib}
-\bibliographystyle{apalike}
-\setlength{\bibsep}{0.0pt}
-\usepackage{times} % TNR font
-\usepackage{multicol,caption}
-\newenvironment{Figure}
-  {\par\medskip\noindent\minipage{\linewidth}}
-  {\endminipage\par\medskip}
-\setlength{\columnsep}{0.6cm}
-\usepackage{ragged2e} % allows \justify cmd
-
-%--------------------------------------------------------------------------
-%	TITLE, AUTHORS AND AFFILIATIONS
-%--------------------------------------------------------------------------
 
 \begin{document}
 
@@ -38,7 +16,7 @@ A second paragraph within the abstract.
 \end{abstract}
 
 \section{Introduction}
-Here is the text of your introduction \cite{Hull1990,Soden1978}.
+Here is the text of your introduction \cite{Hull1990}.
 
 \begin{equation}
     \label{simple_equation}
@@ -57,6 +35,6 @@ Write your subsection text here.
 Write your conclusion here.
 
 
+\bibliography{references}
 \end{document}
 
-\bibliography{references}
