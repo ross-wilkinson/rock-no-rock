@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1594188811 "/Users/rosswilkinson/Documents/projects/rock-no-rock/docs/manuscript.tex" "/Users/rosswilkinson/Documents/projects/rock-no-rock/docs/manuscript.pdf" "manuscript" 1594188813
-  "/Users/rosswilkinson/Documents/projects/rock-no-rock/docs/manuscript.aux" 1594188812 351 60ae19491fa1f887d0c81bd28b872b12 ""
-  "/Users/rosswilkinson/Documents/projects/rock-no-rock/docs/manuscript.tex" 1594188809 524 b1c487535029c03afa7100d72e43c3b6 ""
+["pdflatex"] 1594190084 "/Users/rosswilkinson/Documents/projects/rock-no-rock/docs/manuscript.tex" "/Users/rosswilkinson/Documents/projects/rock-no-rock/docs/manuscript.pdf" "manuscript" 1594190085
+  "/Users/rosswilkinson/Documents/projects/rock-no-rock/docs/manuscript.aux" 1594190085 351 60ae19491fa1f887d0c81bd28b872b12 ""
+  "/Users/rosswilkinson/Documents/projects/rock-no-rock/docs/manuscript.tex" 1594190081 606 504334103e463587e935c5498f0629e8 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm" 1136768653 1328 5442e22a7072966dbaf88ca900acf3f0 ""
@@ -49,11 +49,11 @@
   "/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1557342064 3277517 23507ed665b4dd9046f0f2a94bbef2be ""
   "/usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1557342086 4259635 562fc36ec496993777a6c428d8bfb811 ""
   "/usr/local/texlive/2019/texmf.cnf" 1557341546 577 d150fef99ac436ad1156e86b0892f6ef ""
-  "manuscript.aux" 1594188812 351 60ae19491fa1f887d0c81bd28b872b12 "pdflatex"
-  "manuscript.tex" 1594188809 524 b1c487535029c03afa7100d72e43c3b6 ""
+  "manuscript.aux" 1594190085 351 60ae19491fa1f887d0c81bd28b872b12 "pdflatex"
+  "manuscript.tex" 1594190081 606 504334103e463587e935c5498f0629e8 ""
   (generated)
   "manuscript.pdf"
   "/Users/rosswilkinson/Documents/projects/rock-no-rock/docs/manuscript.log"
-  "manuscript.log"
   "manuscript.aux"
   "/Users/rosswilkinson/Documents/projects/rock-no-rock/docs/manuscript.pdf"
+  "manuscript.log"
