@@ -3,11 +3,11 @@
 
 **Purpose:** Measure maximal power output with different lean constraints
 
-**Date:** 2020-01-06
+**Date:** 2020-07-20
 
 **Subject:** SX
 
-**Calibration Factor:** 208
+**Calibration Factor:** 234
 
 ## Protocol
 ### Conditions
@@ -24,20 +24,20 @@
 ### Warm Up and Familiarization
 | Condition | Trial No. | Hanging Weight (Lbs) | Power (W) | Cadence (RPM) |
 | --- | --- | --- | --- | --- |
-| WU | 1 | 2.5 | 112 | 77 |
-| c01 | 1 | 12.5 | | |
-| c01 | 2 | 22.5 | 
-| c01 | 3 | 32.5 | 
+| WU | 1 | 2.5 | 100 | 80 |
+| c01 | 1 | 12.5 | x | x |
+| c01 | 2 | 22.5 | x | x |
+| c01 | 3 | 32.5 | x | x |
 
 ### Testing
 | Condition | Trial No. | Hanging Weight (Lbs) | Power (W) | Cadence (RPM) |
 | --- | --- | --- | --- | --- |
-| c03 | 1 | 25 | 
-| c01 | 1 | 25 | 
-| c02 | 1 | 25 | 
-| c01 | 2 | 25 | 
-| c02 | 2 | 25 | 
-| c03 | 2 | 25 | 
-| c02 | 3 | 25 | 
-| c01 | 3 | 25 | 
-| c03 | 3 | 25 | 
+| c03 | 1 | 25 | x | x |
+| c01 | 1 | 25 | x | x |
+| c02 | 1 | 25 | x | x |
+| c01 | 2 | 25 | x | x |
+| c02 | 2 | 25 | x | x |
+| c03 | 2 | 25 | x | x |
+| c02 | 3 | 25 | x | x |
+| c01 | 3 | 25 | x | x |
+| c03 | 3 | 25 | x | x |
