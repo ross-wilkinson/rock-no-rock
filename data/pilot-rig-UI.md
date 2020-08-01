@@ -1,4 +1,5 @@
 # Pilot Testing
+
 ## Testing Information
 
 **Purpose:** Measure maximal power output with different lean constraints
@@ -10,18 +11,23 @@
 **Calibration Factor:** 278
 
 ## Protocol
+
 ### Conditions
+
 - C01: Preferred
 - C02: Self-restricted
 - C03: Constrained
 
 ### Trial Order
+
 - Block 1: 1,2,3
 - Block 2: 2,3,1
 - Block 3: 3,1,2
 
 ## Results
+
 ### Warm Up and Familiarization
+
 | Condition | Trial No. | Hanging Weight (Lbs) | Cadence (RPM) | Power  (W) |
 | --- | --- | --- | --- | --- |
 | WU | 1 | 2.5 | 79 | 96 |
@@ -30,6 +36,7 @@
 | c01 | 3 | 18.5 | 118 | 1143 |
 
 ### Testing
+
 | Condition | Trial No. | Hanging Weight (Lbs) | Cadence (RPM) | Power (W) |
 | --- | --- | --- | --- | --- |
 | c01 | 1 | 19.5 | 111 | 1033 |
