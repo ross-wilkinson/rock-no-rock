@@ -1,4 +1,4 @@
-function [c, y1, yOpt, xOpt] = fitPowerCurve(x,y)
+function [c, y1] = fitPowerCurve(x,y)
 %FITPOWERCURVE Use hanging weights and power outputs from intial sprint
 %trials to predict the hanging weight that will maximize power output using
 %a 2nd order polynomial fit.
@@ -39,9 +39,9 @@ c1 = 'k';
 
 %% Calculate optimal hanging weight and display
 y1 = c.p1*x1.^2+c.p2*x1+c.p3;
-[yOpt,I] = max(y1);
+[M,I] = max(y1);
 formatSpec = 'Predicted maximal power output = %4.2f Watts \n';
-fprintf(formatSpec,yOpt)
+fprintf(formatSpec,M)
 
 xOpt = x1(I);
 formatSpec = 'Predicted optimal hanging weight = %4.2f Lbs \n';
@@ -60,3 +60,4 @@ xlim([0 50])
 ylim([0 1500])
 
 end
+
