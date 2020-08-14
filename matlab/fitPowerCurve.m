@@ -12,7 +12,10 @@ function [c, y1, yOpt, xOpt] = fitPowerCurve(x,y)
 %           - y1 = power output as a function of hanging weights from 0 to
 %           50 lbs
 %           - figure = figure showing the data and curve
-
+%
+%   Written by Ross Wilkinson (University of Colorado Boulder)
+%   (c) Ross Wilkinson
+%
 %% Fit 2nd order polynomial
 [c, ~, ~] = fit(x,y,'poly2','Robust','on');
 
