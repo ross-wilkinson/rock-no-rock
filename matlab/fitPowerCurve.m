@@ -11,6 +11,8 @@ function [c, y1, yOpt, xOpt] = fitPowerCurve(x,y)
 %           - c = fit object (see documentation on "fit" function)
 %           - y1 = power output as a function of hanging weights from 0 to
 %           50 lbs
+%           - yOpt = predicted maximal power output in Watts
+%           - xOpt = predicted optimal hanging weight in Lbs
 %           - figure = figure showing the data and curve
 %
 %   Written by Ross Wilkinson (University of Colorado Boulder)
