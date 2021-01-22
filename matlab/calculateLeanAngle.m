@@ -25,7 +25,8 @@ tF_ = tF(syncF:end,:);
 tC_.timestamp = tC_.timestamp - tC_.timestamp(1);
 tF_.timestamp = tF_.timestamp - tF_.timestamp(1);
 
-% Lowpass filter acceleration signal of x axis (vertical axis)
+% Lowpass filter acceleration signal of crank x axis (vertical axis) and
+% frame y axis (medio-lateral axis)
 freq = 500;
 pass = 2;
 tC_.accel_x_m_s2_ = lowpass(tC_.accel_x_m_s2_,pass,freq);
@@ -50,11 +51,13 @@ tF_ = tF_(tF_.timestamp > t1 & tF_.timestamp < t2,:);
 % Check if IMU data is empty due to poor sync
 
 
-% Smooth acceleration signal in y-axis.
+% Smooth frame acceleration signal in y-axis.
 dt = 1/500;
 window = 50; % 100 ms
-acc = detrend(tF_.accel_y_m_s2_);
-acc = smoothdata(acc,'gaussian',window);
+acc = smoothdata(tF_.accel_y_m_s2_,'gaussian',window);
+
+% Detrend frame acceleration signal
+acc = detrend(acc);
 
 % Convert to angular acceleration.
 r = 0.53; % height of IMU above pivot in meters
@@ -69,20 +72,38 @@ pos = cumtrapz(dvel)*dt;
 pos = smoothdata(pos,'gaussian',window);
 %pos = interp1(1:length(pos),pos,1:length(pos)/(length(vel)+1):length(pos));
 
+% Detrend frame position signal (nonlinear)
+t = 1:numel(pos);
+pos_nl = pos';
+opol = 12;
+[p,~,mu] = polyfit(t,pos_nl,opol);
+f_y = polyval(p,t,[],mu);
+dt_pos = pos_nl - f_y;
+
 % Store angular displacement in table
 tF_.thetaAcc = acc;
 tF_.thetaVel = vel;
-tF_.thetaPos = pos;
+tF_.thetaPos = dt_pos';
 
-% Detrend crank acceleration signal
-tC_.accel_x_m_s2_ = detrend(tC_.accel_x_m_s2_);
+% Smooth crank acceleration signal
+accC = smoothdata(tC_.accel_x_m_s2_,'gaussian',window);
+
+% Detrend crank acceleration signal (nonlinear)
+t = 1:numel(accC);
+acc_nl = accC';
+opol = 6;
+[p,~,mu] = polyfit(t,acc_nl,opol);
+f_y = polyval(p,t,[],mu);
+dt_acc = acc_nl - f_y;
+tC_.acc = dt_acc';
 
 % Find peaks in crank signal
-[~,locs] = findpeaks(tC_.accel_x_m_s2_,"MinPeakProminence",5,"MinPeakDistance",150);
+[~,locs] = findpeaks(tC_.acc,"MinPeakProminence",5,"MinPeakDistance",150);
 
 % Calculate range of bicycle lean during each crank cycle
 for i = 1:numel(locs)-1
     a = detrend(tF_.thetaPos(locs(i):locs(i+1)));
+%     a = tF_.thetaPos(locs(i):locs(i+1));
     a = interp1(1/length(a):1/length(a):1,a,1/length(a):1/362:1);
     leanArray(:,i) = a(1:361);
     leanRange(i) = range(a);

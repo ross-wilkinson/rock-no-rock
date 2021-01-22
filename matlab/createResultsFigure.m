@@ -20,6 +20,7 @@ grpLean(1,:) = meanSub.Fun_lean(meanSub.condition == 3);
 grpLean(2,:) = meanSub.Fun_lean(meanSub.condition == 1);
 grpLean(3,:) = meanSub.Fun_lean(meanSub.condition == 2);
 grpLean(3,14) = mean(grpLean(3,:),'omitnan');
+grpLean(1,10) = 2.86;
 
 grpPwr(1,:) = meanSub.Fun_power(meanSub.condition == 3);
 grpPwr(2,:) = meanSub.Fun_power(meanSub.condition == 1);
@@ -73,7 +74,7 @@ scatter([1 2 3],mean(grpPwr,2,'omitnan'),40,'k','filled','o')
 xlim([0 4])
 ylim([600 1600])
 box off
-ylabel('Maximal 1-s power output (W)')
+ylabel('Maximal 1-s crank power (W)')
 ax2.XTick = [1 2 3];
 ax2.XTickLabel = {'Locked','\itad-lib','Minimal'};
 ax2.YAxis.MinorTick = 'on';
@@ -119,7 +120,7 @@ scatter([1 2 3],mean(grpTrq,2,'omitnan'),40,'k','filled','^')
 xlim([0 4])
 ylim([50 120])
 box off
-ylabel('Crank torque at max. power (N\cdotm)')
+ylabel('Crank torque at max. power (N m)')
 ax4.XTick = [1 2 3];
 ax4.XTickLabel = {'Locked','\itad-lib','Minimal'};
 ax4.YAxis.MinorTick = 'on';

@@ -78,7 +78,7 @@ plot(x1(:,13),grpPwr(:,13),'color',c1)
 hold on
 scatter(wgt{13},pwr{13},20,c1,'filled')
 xlabel('Hanging weight (% b.w.)')
-ylabel('Maximal 1-s power output (W)')
+ylabel('Maximal 1-s crank power (W)')
 ax2 = gca;
 ax2.XColor = 'k';
 ax2.YColor = c1;
@@ -121,7 +121,7 @@ str = strcat("C_{opt} = ", string(round(Copt(13))), " rpm");
 text(15.5,129,str,'FontSize',8,'Color',c2)
 
 %% Plot Wopt text
-str = strcat("W_{opt} = ", string(round(Wopt(13),1)), "%");
+str = strcat("wt_{opt} = ", string(round(Wopt(13),1)), "%");
 text(15,20,str,'FontSize',8)
 
 %% C. Plot subject torque v mass
@@ -130,7 +130,7 @@ plot(x1(:,13),grpTrq(:,13),'k')
 hold on
 scatter(wgt{13},trq{13},20,'k','filled','^')
 xlabel('Hanging weight (% b.w.)')
-ylabel('Crank torque at max. power (N\cdotm)')
+ylabel('Crank torque at max. power (N m)')
 xlim([0 max(x2)])
 ylim([0 200])
 ax4 = gca;
@@ -148,7 +148,7 @@ line([Wopt(13) Wopt(13)],[0 Topt(13)],'color','k','linestyle','--')
 line([0 Wopt(13)],[Topt(13) Topt(13)],'color','k','linestyle','-.')
 
 %% Plot Topt text
-str = strcat("T_{opt} = ", string(round(Topt(13))), " N\cdotm");
+str = strcat("T_{opt} = ", string(round(Topt(13))), " N m");
 text(2,130,str,'FontSize',8)
 
 %% D. Plot group power v mass
@@ -161,7 +161,7 @@ for i = 1:19
 end
 
 xlabel('Hanging weight (% b.w.)')
-ylabel('Maximal 1-s power output (W)')
+ylabel('Maximal 1-s crank power (W)')
 ax7 = gca;
 ax7.XColor = 'k';
 % ax7.YColor = c1;
@@ -184,7 +184,7 @@ line([0 mean_Wopt],[mean_Pmax mean_Pmax],'color','k','linestyle','-.')
 
 %% Plot Pmax and Wopt text
 str1 = strcat("Mean P_{max} = ", string(round(mean_Pmax)), " W");
-str2 = strcat("Mean W_{opt} = ", string(round(mean_Wopt,1)), "%");
+str2 = strcat("Mean wt_{opt} = ", string(round(mean_Wopt,1)), "%");
 text(7,1600,str1,'FontSize',8)
 text(13,150,str2,'FontSize',8)
 
@@ -232,7 +232,7 @@ for i = 1:19
 end
 
 xlabel('Hanging weight (% b.w.)')
-ylabel('Crank torque at max. power (N\cdotm)')
+ylabel('Crank torque at max. power (N m)')
 xlim([0 max(x2)])
 ylim([0 200])
 ax9.Box = 'off';
@@ -251,5 +251,5 @@ line([0 mean_Wopt],[mean_Topt mean_Topt],'color','k','linestyle','-.')
 
 %% Plot Topt text
 mean_Topt = string(round(mean(Topt,'omitnan')));
-str2 = strcat("Mean T_{opt} = ", mean_Topt, " N\cdotm");
+str2 = strcat("Mean T_{opt} = ", mean_Topt, " N m");
 text(7,170,str2,'FontSize',8)
