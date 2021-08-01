@@ -11,7 +11,6 @@ cd(datDir)
 load('group_data.mat')
 
 %% Extract subject data
-
 [adlib, minimal, locked] = deal(cell(19,1));
 
 nA = 0;
