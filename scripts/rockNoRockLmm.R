@@ -1,19 +1,22 @@
 ### Rock vs. No Rock
 
+### Import libraries
+library(lme4)
+library(emmeans)
+library(pbkrtest)
+library(lmerTest)
+
 ### Load data set
-df = read.csv("~/Google Drive/projects/datasets/rockNoRock.csv")
+df <- read.csv("./datasets/rockNoRockErgo.csv")
 
 ### Plot power vs. condition*subject
-boxplot(power ~ condition*subject,
-        col=c("white","lightgray"), df)
+boxplot(power ~ condition * subject, col = c("white", "lightgray"), df)
 
 ### Fit linear mixed-effects model
-df.model = lmer(power ~ condition + (1+condition|subject),
-                 data=df)
+df.model <- lmer(power ~ condition + (1 + condition | subject), data = df)
 
 ### Fit null-effect model without condition
-df.null = lmer(power ~ (1+condition|subject),
-                 data=df, REML=FALSE)
+df.null <- lmer(power ~ (1 + condition | subject), data = df, REML = FALSE)
 
 ### Print summary of model fit
 summary(df.model)
@@ -22,8 +25,8 @@ summary(df.model)
 anova(df.null, df.model)
 
 ### Perform paired t-tests
-#df.emm.s <- emmeans(df.model, pairwise~condition)
-#pairs(df.emm.s)
+# df.emm.s <- emmeans(df.model, pairwise~condition)
+# pairs(df.emm.s)
 
 anova(power ~ condition, data = df, paired = TRUE)
 
